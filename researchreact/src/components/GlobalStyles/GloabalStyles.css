@@ -1,0 +1,19 @@
+:root{
+   --white: #ffffff;
+   --black: #000000;
+}
+@media (max-width: 1024px) { /* Tablet */
+    
+}
+
+@media (max-width: 600px) { /* Mobile */
+    
+}
+body {
+    background-color: var(--background);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

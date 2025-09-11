@@ -1,0 +1,59 @@
+.navbar-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-navbar {
+    height: 40px; /* điều chỉnh kích thước logo */
+    margin-right: 20px;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* khoảng cách giữa icon và chữ */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f39c12; /* đổi màu khi hover */
+}
+
+.nav-icon {
+    font-size: 18px;
+}
+.search-container {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 2px 8px;
+    border: solid 1px #ccc;
+    background-color: white;
+    gap: 4px;
+}
+.search-icon {
+    color: #888;
+    margin-right: 6px;
+    background-color: white;
+}
+.search-icon::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+    margin-left: 6px;
+}
+.search-input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+}

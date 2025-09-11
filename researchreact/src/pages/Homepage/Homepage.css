@@ -1,0 +1,71 @@
+.homepage {
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-info {
+  padding: 10px;
+  text-align: left;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.movie-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination button {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
