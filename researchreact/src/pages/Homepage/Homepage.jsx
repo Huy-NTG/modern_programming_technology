@@ -1,11 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './Homepage.css'
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1); // trang hiện tại
   const [totalPages, setTotalPages] = useState(1); // tổng số trang từ API
-
+  const navigate = useNavigate();
+  
   const options = {
     method: "GET",
     headers: {
@@ -31,9 +33,14 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <h1>🎬 Popular Movies</h1>
+      {/*hiển thị danh sách phim*/}
       <div className="movie-list">
         {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
+          <div 
+            key={movie.id} 
+            className="movie-card"
+            onClick={() => navigate(`/movie/${movie.id}`)}
+            >
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
@@ -48,7 +55,7 @@ const Homepage = () => {
         ))}
       </div>
 
-      {/* Pagination controls */}
+      {/* thanh Pagination controls */}
       <div className="pagination">
         <button
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
