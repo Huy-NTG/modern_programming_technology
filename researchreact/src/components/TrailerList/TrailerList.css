@@ -1,0 +1,22 @@
+.trailers-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #222;
+}
+
+.trailers-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.trailers-list::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 4px;
+}
+
+.trailers-list::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}

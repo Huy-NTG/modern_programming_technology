@@ -1,0 +1,13 @@
+.latest-trailers {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(20,20,20,0.9), rgba(10,10,10,0.8));
+  border-radius: 12px;
+}
+
+.latest-trailers h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}

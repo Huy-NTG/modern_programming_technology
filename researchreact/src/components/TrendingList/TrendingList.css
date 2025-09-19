@@ -1,0 +1,51 @@
+.trending-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #222;
+}
+
+.trending-card {
+  min-width: 180px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  /* flex-shrink: 0; */
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.trending-card:hover {
+  transform: scale(1.05);
+}
+
+.trending-card img {
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+
+.trending-info {
+  padding: 10px;
+  color: #fff;
+  margin-top: 13px;
+}
+
+.trending-info h4 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.trending-info p {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.rating-container{
+    width: 50px;
+    position: absolute;
+    top: 68%;
+    left: 5%;
+}

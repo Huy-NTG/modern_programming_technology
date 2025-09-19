@@ -1,0 +1,50 @@
+.trailer-card {
+  min-width: 280px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.trailer-card:hover {
+  transform: scale(1.05);
+}
+
+.trailer-thumb {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.trailer-thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: white;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.trailer-card h4 {
+  margin: 8px 0 2px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.trailer-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+}
