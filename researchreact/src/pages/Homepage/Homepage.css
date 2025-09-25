@@ -2,7 +2,8 @@
   padding: 20px;
   background-color: #111;
   color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+   min-height: auto;
 }
 .homepage h1 {
   margin-bottom: 20px;

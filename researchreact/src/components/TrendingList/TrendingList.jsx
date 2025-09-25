@@ -2,8 +2,9 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import './TrendingList.css'
 import { useNavigate } from "react-router-dom";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+
 import "react-circular-progressbar/dist/styles.css";
+import TrendingCard from '../TrendingCard/TrendingCard';
 const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
 
 const options = {
@@ -34,7 +35,7 @@ const TrendingList = ({ timeWindow = "day" }) => {
     }, [timeWindow]);
   return (
      <div className="trending-list">
-      {movies.map((movie) => (
+      {/* {movies.map((movie) => (
         <div
           key={movie.id}
           className="trending-card"
@@ -44,7 +45,7 @@ const TrendingList = ({ timeWindow = "day" }) => {
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title}
           />
-            {/* Rating vòng tròn */}
+            
             <div className='rating-container'>
               <CircularProgressbar
                 value={movie.vote_average * 10}
@@ -62,6 +63,13 @@ const TrendingList = ({ timeWindow = "day" }) => {
             <p>{new Date(movie.release_date).toDateString()}</p>
           </div>
         </div>
+      ))} */}
+      {movies.map((movie) => (
+        <TrendingCard
+          key={movie.id}
+          movie={movie}
+          onClick={() => navigate(`/movie/${movie.id}`)}
+        />
       ))}
     </div>
   )

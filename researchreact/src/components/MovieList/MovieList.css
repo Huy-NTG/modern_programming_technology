@@ -1,5 +1,17 @@
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+}
+/* Style riêng cho Homepage */
+.movie-list.homepage {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #222;
+}
+/* Style mặc định cho Popular Page */
+.movie-list.popular {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }

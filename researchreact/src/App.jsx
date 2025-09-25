@@ -8,6 +8,7 @@ import Category from './pages/CategoryPage/CategoryPage';
 import MainLayout from './layouts/MainLayout';
 import TVshowpage from './pages/TVshow/TVshowpage';
 import MoviePage from './pages/moviepage/MoviePage';
+import MovieReviewsPage from './pages/MovieReviewsPage/MovieReviewsPage';
 const App = () => {
   return (
     <div>
@@ -22,7 +23,7 @@ const App = () => {
             <Route path="/favorites" element={<FavoritesPage />} /> {/* url đến FavoritesPage */}
             <Route path="/tvshow" element={<TVshowpage />} /> {/* url đến TVShow */}
             <Route path="/movie" element={<MoviePage />} /> {/* url đến danh sách movie */}
-
+            <Route path="/movie/:id/reviews" element={<MovieReviewsPage />} />
           </Route>
         </Routes>
     </Router>

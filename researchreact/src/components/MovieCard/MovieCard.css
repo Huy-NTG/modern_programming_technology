@@ -3,26 +3,62 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.2s;
+  position: relative;
+  cursor: pointer;
 }
 
+/* Style riêng cho Homepage (giữ nguyên) */
+.movie-card.homepage {
+  min-width: 180px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+/* Hover effect */
 .movie-card:hover {
   transform: scale(1.05);
 }
 
+/* Poster */
 .movie-card img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px 10px 0 0;
 }
 
+/* Rating overlay */
+.rating-container-movieCard {
+  /*lỗi trùng tên với css class với component khác*/
+  /* position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 62%;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center; */ 
+  width: 50px;
+  position: absolute;
+  top: 62%;
+  left: 5%;
+  
+}
+
+/* Movie info */
 .movie-info {
   padding: 10px;
   text-align: left;
+  margin-top: 15px;
 }
 
 .movie-info h3 {
   font-size: 18px;
   margin: 0 0 5px;
+  color: #fff;
 }
 
 .movie-info p {

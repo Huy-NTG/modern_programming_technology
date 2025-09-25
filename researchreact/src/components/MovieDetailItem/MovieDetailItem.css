@@ -1,62 +1,62 @@
-/* .movie-detail { */
-    /* position: relative;
+.movie-detail {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding: 40px; */
+    padding: 40px;
     /* border-radius: 10px; */
-    /* background-size: cover;
+    background-size: cover;
     background-position: center;
-    overflow: hidden; */
-/* } */
+    overflow: hidden;
+}
 
 /* lớp phủ tối background */
-/* .movie-detail .overlay { */
-    /* position: absolute;
-    inset: 0; */
-    /* background: rgba(0, 0, 0, 0.6); chỉnh độ tối */
-    /* z-index: 0; */
-/* } */
+.movie-detail .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* chỉnh độ tối */
+    z-index: 0;
+}
 
-/* .movie-detail .movie-poster {
+.movie-detail .movie-poster {
     flex-shrink: 0;
     width: 300px;
     border-radius: 10px;
     z-index: 1;
-} */
+}
 
-/* .movie-detail .content-container {
+.movie-detail .content-container {
     z-index: 1;
     max-width: 600px;
     color: white;
     align-items: center;
     
-} */
-/* .content-container .info-row ul { */
-  /* display: flex; */
-  /* gap: 20px;  khoảng cách giữa các mục */
-  /* list-style: none; tắt bullet mặc định */
-  /* padding: 0;
+}
+.content-container .info-row ul {
+  display: flex;
+  gap: 20px;  /* khoảng cách giữa các mục */
+  list-style: none; /* tắt bullet mặc định */
+  padding: 0;
   margin: 0;
-  color: rgba(129, 130, 124, 0.771); */
-/* } */
-/* .content-container .info-row li:first-child { */
+  color: rgba(129, 130, 124, 0.771);
+}
+.content-container .info-row li:first-child {
   /* thêm kiểu riêng cho mục đầu tiên nếu cần */
-  /* list-style: none; */
-/* } */
-/* .content-container .info-row li { */
-  /* position: relative; */
-  /* padding-left: 12px; tạo chỗ trống cho bullet */
-  /* cursor: pointer; */
-/* } */
+  list-style: none;
+}
+.content-container .info-row li {
+  position: relative;
+  padding-left: 12px; /* tạo chỗ trống cho bullet */
+  cursor: pointer;
+}
 
-/* .content-container .info-row li::before { */
-  /* content: "•"; tự tạo bullet */
-  /* position: absolute;
+.content-container .info-row li::before {
+  content: "•"; /* tự tạo bullet */
+  position: absolute;
   left: 0;
   color: rgba(129, 130, 124, 0.771);
-} */
-/* .content-container .rating-container {
+}
+.content-container .rating-container-movieDetail {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -101,4 +101,4 @@
     font-size: 1rem;
     gap: 8px;
     transition: background-color 0.3s, transform 0.2s;
-} */
+}
