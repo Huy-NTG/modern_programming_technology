@@ -1,0 +1,41 @@
+.actor-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px; /* 📌 Đây là cột trái */
+  color: black;
+}
+
+.actor-profile img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.actor-social {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.actor-social a {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.actor-social a:hover {
+  color: #1da1f2; /* xanh Twitter */
+}
+
+.actor-info {
+  font-size: 14px;
+  line-height: 1.6;
+  
+}
+.actor-info strong {
+  display: inline-block;
+  width: 120px;
+  
+}
+.actor-info p{
+    margin: 15px 0;
+}

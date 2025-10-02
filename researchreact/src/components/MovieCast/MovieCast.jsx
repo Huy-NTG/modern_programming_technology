@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./MovieCast.css"
 const MovieCast = ({ movieId }) => {
   const [cast, setCast] = useState([]);
@@ -34,7 +35,7 @@ const MovieCast = ({ movieId }) => {
       <h2>Cast</h2>
       <div className="cast-list">
         {cast.slice(0, 10).map((actor) => (
-          <div key={actor.id} className="cast-card">
+          <Link key={actor.id} to={`/actor/${actor.id}`} className="cast-card">
             <img
               src={
                 actor.profile_path
@@ -47,7 +48,7 @@ const MovieCast = ({ movieId }) => {
               <p className="actor-name">{actor.name}</p>
               <p className="character-name">as {actor.character}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,13 +1,21 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import User_default from "../../assets/img/profile_Default.png"
 import "./MovieReviewPreview.css"
+
 const MovieReviewPreview = ({ movieId }) => {
-    const [review, setReview] = useState(null);
+  const [review, setReview] = useState(null);
   const [loading, setLoading] = useState(true);
   const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
   const BASE_URL = "https://api.themoviedb.org/3";
-
+  const getAvatarUrl = (avatarPath) => {
+    if (!avatarPath) return User_default; 
+    if (avatarPath.startsWith("/https")) {
+      return avatarPath.substring(1); 
+    }
+    return `https://image.tmdb.org/t/p/w200${avatarPath}`;
+  };
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -19,7 +27,7 @@ const MovieReviewPreview = ({ movieId }) => {
         });
         const data = await res.json();
         if (data.results && data.results.length > 0) {
-          setReview(data.results[0]); // lấy review đầu tiên
+          setReview(data.results[0]); // chỉ lấy review đầu tiên
         }
       } catch (err) {
         console.error("Error fetching review:", err);
@@ -34,19 +42,28 @@ const MovieReviewPreview = ({ movieId }) => {
   if (!review) return <p>Chưa có review nào.</p>;
 
   return (
-    <div className="review-preview">
-      <h2>Đánh giá nổi bật</h2>
-      <div className="review-card">
-        <h4>{review.author}</h4>
-        <p className="review-content">
-          {review.content.length > 200
-            ? review.content.slice(0, 200) + "..."
-            : review.content}
-        </p>
-        <Link to={`/movie/${movieId}/reviews`} className="read-more">
-          Read all reviews
-        </Link>
+     <div className="review-card-container">
+      <div className="review-header">
+        <img
+          src={getAvatarUrl(review.author_details.avatar_path)}
+          alt={review.author}
+          className="review-avatar"
+        />
+        <div>
+          <h4>{review.author}</h4>
+          {review.author_details.rating && (
+            <p>⭐ {review.author_details.rating}/10</p>
+          )}
+        </div>
       </div>
+      <p>{review.content.slice(0, 250)}...</p>
+      <a href={review.url} target="_blank" rel="noreferrer">
+        Xem chi tiết review
+      </a>
+      <br />
+      <Link to={`/movie/${movieId}/reviews`} className="see-all-btn">
+        See all reviews →
+      </Link>
     </div>
   )
 }

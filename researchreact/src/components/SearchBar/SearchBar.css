@@ -7,6 +7,7 @@
   padding: 8px 14px;
   border: 1px solid transparent;
   width: 100% ; /* kích thước ban đầu */
+  border-bottom: 1px solid #555;
 }
 
 .search-container:focus-within {

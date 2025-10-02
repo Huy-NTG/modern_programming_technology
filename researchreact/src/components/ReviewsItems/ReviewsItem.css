@@ -1,0 +1,48 @@
+.review-card {
+  background: #fefcfc;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, .1);
+  margin: 10px;
+}
+
+/* .review-card:hover {
+  transform: scale(1.02);
+} */
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.review-avatar {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-card h4 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.review-card p {
+  margin: 10px 0;
+  line-height: 1.4;
+  color: black;
+}
+
+.review-card a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+.review-card a:hover {
+  text-decoration: underline;
+}

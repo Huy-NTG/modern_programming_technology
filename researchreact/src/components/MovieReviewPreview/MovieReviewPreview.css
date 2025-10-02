@@ -1,38 +1,82 @@
-.review-preview {
-  margin: 30px 0;
-  background: #111;
-  padding: 20px;
-  /* border-radius: 10px; */
+.review-card-container {
+  background: #ffffff; 
+  color: #000000;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 8px ;
+  
 }
 
-.review-preview h2 {
-  color: #f1f1f1;
-  margin-bottom: 15px;
+/* .review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+} */
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
-.review-card {
-  background: #1c1c1c;
-  padding: 15px;
-  border-radius: 8px;
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* avatar tròn */
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #444;
 }
 
-.review-card h4 {
-  margin: 0 0 10px;
-  color: #fff;
+.review-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
 }
 
-.review-content {
-  color: #ccc;
-  font-size: 14px;
+.review-header p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #ffc107; /* màu vàng cho rating */
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin-bottom: 10px;
+  color: #ddd;
 }
 
-.read-more {
-  color: #00b4d8;
+.review-card a {
+  display: inline-block;
+  font-size: 0.9rem;
   text-decoration: none;
-  font-size: 14px;
+  color: #1e90ff;
+  margin-top: 6px;
+  transition: color 0.2s ease;
 }
 
-.read-more:hover {
-  text-decoration: underline;
+/* .review-card a:hover {
+  color: #63b3ed;
+} */
+
+.see-all-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #1e90ff;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.see-all-btn:hover {
+  background: #63b3ed;
+  transform: translateY(-2px);
 }

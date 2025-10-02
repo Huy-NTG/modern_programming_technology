@@ -1,0 +1,27 @@
+.reviews-header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #f6dcdc; /* giống nền trong ảnh */
+  padding: 15px;
+  
+}
+
+.reviews-header h2 {
+  margin: 0;
+  color: #222;
+}
+
+.back-link {
+  color: #84888a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

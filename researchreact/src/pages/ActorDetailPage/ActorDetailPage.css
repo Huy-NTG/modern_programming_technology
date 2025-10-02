@@ -1,0 +1,22 @@
+.actor-detail-page {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  color: #f1f1f1;
+  margin: 20px;
+  
+ 
+  
+}
+
+/* Cột trái */
+.actor-left {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Cột phải */
+.actor-right {
+  flex: 1;
+  max-width: 76%;
+}

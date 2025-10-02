@@ -1,104 +1,14 @@
-/* .movie-detail { */
-    /* position: relative;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 40px; */
-    /* border-radius: 10px; */
-    /* background-size: cover;
-    background-position: center;
-    overflow: hidden; */
-/* } */
-
-/* lớp phủ tối background */
-/* .movie-detail .overlay { */
-    /* position: absolute;
-    inset: 0; */
-    /* background: rgba(0, 0, 0, 0.6); chỉnh độ tối */
-    /* z-index: 0; */
-/* } */
-
-/* .movie-detail .movie-poster {
-    flex-shrink: 0;
-    width: 300px;
-    border-radius: 10px;
-    z-index: 1;
-} */
-
-/* .movie-detail .content-container {
-    z-index: 1;
-    max-width: 600px;
-    color: white;
-    align-items: center;
-    
-} */
-/* .content-container .info-row ul { */
-  /* display: flex; */
-  /* gap: 20px;  khoảng cách giữa các mục */
-  /* list-style: none; tắt bullet mặc định */
-  /* padding: 0;
-  margin: 0;
-  color: rgba(129, 130, 124, 0.771); */
-/* } */
-/* .content-container .info-row li:first-child { */
-  /* thêm kiểu riêng cho mục đầu tiên nếu cần */
-  /* list-style: none; */
-/* } */
-/* .content-container .info-row li { */
-  /* position: relative; */
-  /* padding-left: 12px; tạo chỗ trống cho bullet */
-  /* cursor: pointer; */
-/* } */
-
-/* .content-container .info-row li::before { */
-  /* content: "•"; tự tạo bullet */
-  /* position: absolute;
-  left: 0;
-  color: rgba(129, 130, 124, 0.771);
-} */
-/* .content-container .rating-container {
+.container-info {
   display: flex;
+  gap: 20px;
+  align-items: flex-start;
   align-items: center;
-  gap: 15px;
-  margin: 5px 0;
 }
-.content-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-.option-button-container{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px 0;
 
+.container-info .review-preview {
+  flex: 0 0 65%; /* chiếm 70% */
 }
-.option-button-container .button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    transition: background-color 0.3s, transform 0.2s;
+
+.container-info .keywords {
+  flex: 0 0 33%; /* chiếm 30% */
 }
-.option-button-container .button-playTrailer{
-    width: auto;
-    height: 40px;
-    border-radius: 20px;
-    padding: 0 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    gap: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-} */

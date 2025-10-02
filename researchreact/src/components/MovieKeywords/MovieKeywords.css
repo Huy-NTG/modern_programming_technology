@@ -1,0 +1,28 @@
+.movie-keywords {
+  /* margin: 20px 0; */
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-right: 5px;
+  box-shadow: 2px 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-keywords h3 {
+  margin-bottom: 10px;
+  color: #151414;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword-tag {
+  background: #00b4d8;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

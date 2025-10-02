@@ -1,31 +1,6 @@
 .movie-reviews-page {
-  padding: 20px;
+  /* padding: 20px; */
   color: #f1f1f1;
+  border-top: 1px solid #333;
 }
 
-.movie-reviews-page h2 {
-  margin-bottom: 20px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #00b4d8;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.review-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.review-card {
-  background: #1c1c1c;
-  padding: 15px;
-  border-radius: 8px;
-}

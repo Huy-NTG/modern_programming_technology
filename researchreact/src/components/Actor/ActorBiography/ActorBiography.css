@@ -1,0 +1,37 @@
+.actor-biography {
+  
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.actor-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.actor-bio {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #00b4d8;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  color: gray;
+  font-style: italic;
+}
