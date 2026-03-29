@@ -29,7 +29,6 @@ const MovieDetailItem = ({ movie, isTrailerOpen, setIsTrailerOpen }) => {
           className="movie-poster"
         />
 
-       
         <div className="content-container">
           <h1>{movie.title}</h1>
           <div className="info-row">
@@ -55,7 +54,6 @@ const MovieDetailItem = ({ movie, isTrailerOpen, setIsTrailerOpen }) => {
             {/* <p>{movie.vote_count.toLocaleString()} lượt đánh giá</p> */}
           </div>
 
-        
           <div className="option-button-container">
             <button className="button button-addList">
               <MdFormatListBulletedAdd />

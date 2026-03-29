@@ -19,7 +19,6 @@ const Navbar = () => {
         <Link to="/tvshow" className="nav-link">
           <FaHome className="nav-icon" /> TVshow
         </Link>
-        
         <Link to="/favorites" className="nav-link">
           <MdFavorite className="nav-icon" />Favorites
         </Link>

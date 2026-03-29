@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  /* background-color: #1c1c1c; nền tối */
-  /* border-radius: 25px; */
   padding: 8px 14px;
   border: 1px solid transparent;
   width: 100% ; /* kích thước ban đầu */

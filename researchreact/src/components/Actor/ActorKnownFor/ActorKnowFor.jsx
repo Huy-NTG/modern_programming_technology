@@ -23,12 +23,7 @@ const ActorKnowFor = ({ actorId }) => {
         const data = await res.json();
 
         if (data.cast) {
-          // Sắp xếp theo vote_average (từ cao xuống thấp)
-          // const sorted = [...data.cast].sort(
-          //   (a, b) => b.vote_average - a.vote_average
-          // );
-          // Lấy top 6 phim
-          // setMovies(sorted.slice(0, 10));
+         
            setMovies(data.cast.slice(0, 10));
         }
       } catch (error) {

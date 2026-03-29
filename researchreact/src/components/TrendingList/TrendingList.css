@@ -7,13 +7,12 @@
   scrollbar-color: #666 #222;
 }
 
-.trending-card {
+/* .trending-card {
   min-width: 180px;
   background: #222;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  /* flex-shrink: 0; */
   transition: transform 0.2s;
   position: relative;
 }
@@ -48,4 +47,4 @@
     position: absolute;
     top: 68%;
     left: 5%;
-}
+} */

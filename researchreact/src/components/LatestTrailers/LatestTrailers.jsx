@@ -19,6 +19,7 @@ const LatestTrailers = () => {
   useEffect(() => {
     const fetchTrailers = async () => {
       try {
+        // 1️⃣ Gọi API lấy danh sách phim đang chiếu
         const res = await fetch(
           "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
           options
@@ -27,17 +28,19 @@ const LatestTrailers = () => {
         const movies = data.results.slice(0, 15);
 
         let trailersList = [];
-
+        // 2️⃣ Duyệt từng phim để lấy video trailer của nó
         for (const movie of movies) {
           const resVideos = await fetch(
             `https://api.themoviedb.org/3/movie/${movie.id}/videos?language=en-US`,
             options
           );
+
           const videoData = await resVideos.json();
+
+          // 3️⃣ Lọc ra video có type = "Trailer" và site = "YouTube"
           const trailer = videoData.results.find(
             (v) => v.type === "Trailer" && v.site === "YouTube"
           );
-
           if (trailer) {
             trailersList.push({
               id: movie.id,
@@ -47,16 +50,15 @@ const LatestTrailers = () => {
               trailerName: trailer.name,
             });
           }
-
+          // 5️⃣ Giới hạn chỉ lấy 10 trailer thôi
           if (trailersList.length >= 10) break;
         }
-
+        // 6️⃣ Cập nhật state trailers để hiển thị
         setTrailers(trailersList);
       } catch (err) {
         console.error("Error fetching trailers:", err);
       }
     };
-
     fetchTrailers();
   }, []);
   const handlePlay = (id) => {
@@ -75,5 +77,4 @@ const LatestTrailers = () => {
     </div>
   );
 }
-
 export default LatestTrailers
